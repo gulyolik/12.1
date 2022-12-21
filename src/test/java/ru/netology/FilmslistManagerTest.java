@@ -36,12 +36,8 @@ Filmslist film6 = new Filmslist(5, "Film6");
 
 @Test
     public void shouldShowReversedFilmsMockTest(){
-   manager1.add(film1);
-   manager1.add(film2);
-   manager1.add(film3);
-   manager1.add(film4);
-   manager1.add(film5);
-   manager1.add(film6);
+    Filmslist[] films = {film1, film2, film3, film4, film5, film6};
+    doReturn(films).when(repo).getFilms();
     Filmslist[] expected = {film6, film5, film4, film3, film2, film1};
     Filmslist[] actual = manager1.findLast();
     Assertions.assertArrayEquals(expected, actual);

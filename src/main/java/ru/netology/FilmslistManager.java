@@ -13,7 +13,7 @@ public class FilmslistManager {
     }
 
     public FilmslistManager(FilmslistRepository repo, int maxNumber){
-
+        this.repo = repo;
         this.maxNumber = maxNumber;
     }
 
